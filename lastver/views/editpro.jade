@@ -1,0 +1,28 @@
+extends layoutadmin
+block tieude
+	|Edit Sản Phẩm
+block content
+	form#registerForm.form-horizontal(action='/admin/sanpham/edit', method='post')
+		.row(style='margin-top:30px')
+			.col-md-10.col-md-offset-1.title
+				| Edit Sản Phẩm
+		.row(style='margin-top:30px')
+			.col-md-10.col-md-offset-1
+				.form-group
+					.col-sm-6
+						input(type="hidden" name ="idma" value ="#{edit._id}")
+						input.form-control(type='text', name='tensp', placeholder='Tên Sản Phẩm',value = "#{edit.tensp}")
+					.col-sm-6
+						input.form-control(type='text', name='gia', placeholder='Giá Sản Phẩm',value = "#{edit.gia}")
+		.row()
+			.col-md-10.col-md-offset-1.title
+				.form-group
+					.col-sm-12
+						input.form-control(type='text', name='FullName', placeholder='Giới Thiệu', value = "#{edit.mieuta}")
+				.form-group
+					.col-sm-6(style='margin-top:40px')
+						button.btn.btn-success.pull-right(type='submit')
+							i.fa.fa-check
+							|  Edit
+				a(href='/admin/sanpham')
+					i.fa.fa-home.fa-lg

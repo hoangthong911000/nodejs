@@ -1,0 +1,54 @@
+A.nav, A:visited.nav, A:active.nav, A:link.nav {
+    color:#CCC;
+    text-decoration: none;
+	display: block;
+	padding: 0 25px 0 25px;
+}
+
+A:hover.nav {
+	background-color:#999;
+}
+A.cmd, A:visited.cmd, A:active.cmd, A:link.cmd {
+    color:#CCC;
+    text-decoration: none;
+	display: block;
+	padding: 0 10px 0 10px;
+}
+A:hover.cmd {
+    text-decoration: underline;
+}
+A.Menu, A:visited.Menu, A:active.Menu, A:link.Menu {
+    color:#000;
+    text-decoration: none;
+
+}
+
+A:hover.Menu {
+    color:#0C3;
+    font-weight: bold;
+}
+A.Detail, A:visited.Detail, A:active.Detail, A:link.Detail {
+    color:#963;
+	background-image:url(../img/hinhchu/bg_head_top.jpg);
+    text-decoration: none;
+    display: block;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    margin-top: 10px;
+    font-family: Verdana;
+    font-size: 9pt;
+   
+}
+A:hover.Detail {
+	font-weight: bold;
+}
+A.at, A:visited.at, A:active.at, A:link.at {
+    text-decoration: none;
+	display:block;
+	padding: 0 5px 0 5px;
+}
+A:hover.at {
+    text-decoration: underline;
+}

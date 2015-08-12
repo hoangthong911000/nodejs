@@ -1,0 +1,25 @@
+extends layoutadmin
+block tieude
+	|Thêm User
+block content
+	form#registerForm.form-horizontal(action='', method='post')
+		.row(style='margin-top:30px')
+			.col-md-10.col-md-offset-1.title
+				| Thêm User
+		.row(style='margin-top:30px')
+			.col-md-10.col-md-offset-1
+				.form-group
+					.col-sm-12
+						input.form-control(type='text', name='usename', placeholder='Tên Đăng Nhập')
+				.form-group
+					.col-sm-6
+						input.form-control(type='password', name='pass', placeholder='Mật Khẩu')
+					.col-sm-6
+						input.form-control(type='password', name='pass1', placeholder='Nhập Lại Mật Khẩu')
+				.form-group
+					.col-sm-6(style='margin-top:40px')
+						button.btn.btn-success.pull-right(type='submit')
+							i.fa.fa-check
+							|  Thêm User
+				a(href='/admin/user')
+					i.fa.fa-home.fa-lg

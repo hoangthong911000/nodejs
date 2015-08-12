@@ -1,0 +1,26 @@
+extends layoutadmin
+block tieude
+	|Edit User
+block content
+	form#registerForm.form-horizontal(action='/admin/user/edit', method='post')
+		.row(style='margin-top:30px')
+			.col-md-10.col-md-offset-1.title
+				| Edit User
+		.row(style='margin-top:30px')
+			.col-md-10.col-md-offset-1
+				.form-group
+					.col-sm-12
+						input(type="hidden", name='idma',value="#{edit._id}")
+						input.form-control(type='text', name='usename', placeholder='Tên Đăng Nhập', value="#{edit.usename}")
+				.form-group
+					.col-sm-6
+						input.form-control(type='password', name='pass', placeholder='Mật Khẩu', value="#{edit.pass}")
+					.col-sm-6
+						input.form-control(type='text', name='pq', placeholder='Phân QUyền', value ="#{edit.phanquyen}")
+				.form-group
+					.col-sm-6(style='margin-top:40px')
+						button.btn.btn-success.pull-right(type='submit')
+							i.fa.fa-check
+							|  Edit User
+				a(href='/admin/user')
+					i.fa.fa-home.fa-lg

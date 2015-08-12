@@ -1,0 +1,42 @@
+﻿body {
+    font-family: 'Open Sans';
+    font-size: 10pt;
+}
+select, input {
+    font-family: 'Open Sans';
+    font-size: 15pt;
+}
+.caption-lg-orange {
+    font-weight: bold;
+    font-size: 9pt;
+    color: #fc6e04;
+}
+
+.caption-lg-red {
+    font-weight: bold;
+    font-size: 9pt;
+    color: #f00;
+}
+
+.title {
+    font-family:'Open Sans';
+    font-size: 16pt;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cccccc;
+}
+
+input.blueButton {
+    border: none;
+    color: #fff;
+    background-color: #094ab2;
+    font-family:'Open Sans';
+    font-size: 10pt;
+    font-weight: bold;
+    padding: 6px 20px 6px 20px;
+    cursor: pointer;
+}
+
+input:hover.blueButton {
+    background-color: #42a644;
+}

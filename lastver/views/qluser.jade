@@ -1,0 +1,34 @@
+extends layoutadmin
+block tieude
+	|Quản Lý User
+block content
+	div(style='margin-bottom: 30px;')
+		.col-md-12(style='margin-bottom: 20px;')
+			a.btn.btn-primary(role='button', data-toggle='modal', href='/admin/user/add')
+				i.fa.fa-plus
+				|  Thêm
+	.row
+		.col-md-12
+			table.table.table-hover
+				thead
+					tr
+						th ID
+						th UseName
+						th Pass
+						th Phân Quyền
+						th
+						th
+				tbody
+					each post in us
+						tr
+							td(style='text-align: center;') #{post.mauser}
+							td(style='text-align: center;') #{post.usename}
+							td(style='text-align: center;') #{post.pass}
+							td(style='text-align: center;') #{post.phanquyen}
+							td
+								form#registerForm.form-horizontal(action='/admin/user/#{post._id}', method='post')
+									button#btnDetele.btn.btn-danger.btn-xs(type ='submit' title='Xóa')
+										i.fa.fa-remove
+							td
+								a#btnEdit.btn.btn-success.btn-xs(title='Chỉnh Sửa', role='button', href='/admin/user/edit/#{post._id}')
+									i.fa.fa-pencil

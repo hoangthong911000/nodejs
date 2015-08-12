@@ -1,0 +1,108 @@
+html
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    title DoAnMVC
+    link(href='/assets/bootstrap-3.3.4-dist/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/assets/bootstrap-3.3.4-dist/css/bootstrap-theme.min.css', rel='stylesheet')
+    link(href='/assets/font-awesome-4.3.0/css/font-awesome.min.css', rel='stylesheet')
+    link(href='/assets/bootstrap-custom.css', rel='stylesheet')
+    link(href='/css/tem.css', rel='stylesheet')
+    link(href='/css/style.css', rel='stylesheet')
+    link(href='/css/Site.css', rel='stylesheet')
+    link(href='/css/link.css', rel='stylesheet')
+    link(href='/assets/swal-lib/sweet-alert.css', rel='stylesheet')
+    script(type='text/javascript').
+      function setBigImg(url) {
+      var ele = document.getElementById("bigImg");
+      if (ele == null) return;
+      ele.src = url;
+      }
+      var timer;
+      function enableTimer() {
+      timer = setInterval("timer_tick()", 1500);
+      }
+      var idx = 2;
+      function timer_tick() {
+      var url = "/img/hinhchu/hinhdong/" + idx + ".jpg"
+      setBigImg(url);
+      idx++;
+      if (idx > 7) idx = 1;
+      }
+    block head
+  body
+    #main
+      #header
+      #menu
+        #menu_left
+          ul
+            li
+              a.nav(href='/index')
+                i.fa.fa-home.fa-lg
+                | Trang Chủ
+        #menu_right
+          ul
+            li
+              a.cmd(href='/login') Đăng nhập
+            li
+              a.cmd(href='/logout') Logout
+      div(style='clear: both;')
+      div(style='margin: 10px 0;')
+      #menu-above
+      #main-container
+        #left
+          .category
+            .cat-title
+              |San Pham
+            .cat-content
+              a.Menu(href='/index') Tat Ca San Pham
+          div(style='margin-top: 20px;')    
+        #right
+          .right-box
+            script(type='text/javascript').
+              enableTimer();
+            img#bigImg(src='/img/hinhchu/hinhdong/1.jpg', width='900px', height='350px')
+            div
+              a#tab(name='tab')
+            div(style='margin: 10px 0;')
+            marquee(width='100%', scrollamount='10', direction='right', behavior='scroll', onmouseover='this.stop();', onmouseout='this.start();')
+              a(href='')
+                img(src='/img/hinhchu/32.jpg', width='88', height='120')
+              a(href='')
+                img(src='/img/hinhchu/33.jpg', width='116', height='120')
+              a(href='')
+                img(src='/img/hinhchu/34.jpg', width='120', height='120')
+              a(href='')
+                img(src='/img/hinhchu/35.jpg', width='87', height='120')
+              a(href='')
+                img(src='/img/hinhchu/36.jpg', width='120', height='120')
+              a(href='')
+                img(src='/img/hinhchu/38.jpg', width='114', height='120')
+              a(href='')
+                img(src='/img/hinhchu/42.jpg', width='120', height='120')
+              a(href='')
+                img(src='/img/hinhchu/43.jpg', width='79', height='120')
+              a(href='')
+                img(src='/img/hinhchu/44.jpg', width='120', height='120')
+              a(href='')
+                img(src='/img/hinhchu/48.jpg', width='81', height='120')
+          .right-box
+            .right-box-title_1 
+              div(style='text-align:center;')
+                span.right-box-title_2 
+                  block tieude 
+            .right-box-content
+                block content              
+      div(style='margin: 10px 0;')
+      div(style='clear: both;')
+      #footer
+        span Lập Trình WEB
+        br
+        |             Liên hệ: 
+        a(href='#') Hoàng Thông
+        |  :::: 
+        a(href='#') Văn Tiến 
+    script(src='/assets/bootstrap-3.3.4-dist/js/bootstrap.min.js')
+    script(src='/assets/jquery-1.11.1.min.js')
+    script(src='/assets/swal-lib/sweet-alert.min.js')
+    script(src='/assets/jQuery.1.10.2/Content/Scripts/jquery-1.10.2.min.js')
+    block cuoi

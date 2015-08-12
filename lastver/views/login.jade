@@ -1,0 +1,20 @@
+extends layout
+block tieude
+	|Đăng Nhập 	
+block content
+	form#loginForm.form-horizontal(action='', method='post')
+		.row(style='margin-top:30px')
+			.col-md-10.col-md-offset-1.title
+				| Thông tin đăng nhập
+		.row(style='margin-top:30px')
+			.col-md-10.col-md-offset-1
+				.form-group
+					.col-sm-6
+						input#txtUID.form-control(name='UID', placeholder='Tên đăng nhập')
+				.form-group
+					.col-sm-6
+						input#txtPWD.form-control(type='password', name='PWD', placeholder='Mật khẩu đăng nhập')
+				.col-sm-5
+					button.btn.btn-success.pull-right(type='submit')
+						i.fa.fa-check
+						|  Đăng nhập

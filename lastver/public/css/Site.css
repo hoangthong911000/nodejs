@@ -1,0 +1,54 @@
+﻿body {
+    font-family: 'Open Sans';
+    font-size: 11pt;
+}
+.bold13orange {
+    font-weight: bold;
+    font-size: 13pt;
+    color: #fc6e04;
+}
+
+.bold11red {
+    font-weight: bold;
+    font-size: 11pt;
+    color: #f00;
+}
+
+.title {
+    font-family: 'Segoe UI';
+    font-size: 16pt;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cccccc;
+}
+
+input.blueButton {
+    border: none;
+    color: #fff;
+    background-color: #094ab2;
+    font-family: 'Segoe UI';
+    font-size: 11pt;
+    padding: 6px 20px 6px 20px;
+	cursor: pointer;
+}
+
+input:hover.blueButton {    
+    background-color: #42a644;
+}	
+
+#chitiet2{
+	margin-top: 10px;
+	margin-left: 30px;
+	margin-bottom: 10px;
+	width:330px;
+	float:left;
+}
+#chitiet3{
+	float:left;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width:500px;
+}
+
+

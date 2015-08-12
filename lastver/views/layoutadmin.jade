@@ -1,0 +1,82 @@
+html
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    title DoAnMVC
+    link(href='/assets/bootstrap-3.3.4-dist/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/assets/bootstrap-3.3.4-dist/css/bootstrap-theme.min.css', rel='stylesheet')
+    link(href='/assets/font-awesome-4.3.0/css/font-awesome.min.css', rel='stylesheet')
+    link(href='/assets/bootstrap-custom.css', rel='stylesheet')
+    link(href='/assets/bootstrap-select/dist/css/bootstrap-select.min.css', rel='stylesheet')
+    link(href='/css/tem.css', rel='stylesheet')
+    link(href='/css/style.css', rel='stylesheet')
+    link(href='/css/Site.css', rel='stylesheet')
+    link(href='/css/link.css', rel='stylesheet')
+    link(href='/assets/swal-lib/sweet-alert.css', rel='stylesheet')
+    script(type='text/javascript').
+      function setBigImg(url) {
+      var ele = document.getElementById("bigImg");
+      if (ele == null) return;
+      ele.src = url;
+      }
+      var timer;
+      function enableTimer() {
+      timer = setInterval("timer_tick()", 1500);
+      }
+      var idx = 2;
+      function timer_tick() {
+      var url = "/img/hinhchu/hinhdong/" + idx + ".jpg"
+      setBigImg(url);
+      idx++;
+      if (idx > 7) idx = 1;
+      }
+  body
+    #main
+      #header
+      #menu
+        #menu_left
+          ul
+            li
+              a.nav(href='/index')
+                i.fa.fa-home.fa-lg
+                | Trang Chủ
+        #menu_right
+          ul
+            li
+              a.cmd(href='/logout') Logout            
+      div(style='clear: both;')
+      div(style='margin: 10px 0;')
+      #menu-above
+      #main-container
+        #left
+          .category
+            .cat-title
+              |Phan Quan Ly
+            .cat-content
+              a.Menu(href='/admin/sanpham')  Quan Ly San Pham
+              br
+              a.Menu(href='/admin/user')  Quan Ly Nguoi Dung
+          div(style='margin-top: 20px;')    
+        #right
+          .right-box
+            .right-box-title_1 
+              div(style='text-align:center;')
+                span.right-box-title_2 
+                  block tieude 
+            .right-box-content
+                block content              
+      div(style='margin: 10px 0;')
+      div(style='clear: both;')
+      #footer
+        span Lập Trình WEB
+        br
+        |             Liên hệ: 
+        a(href='#') Hoàng Thông
+        |  :::: 
+        a(href='#') Văn Tiến 
+    script(src='/assets/bootstrap-3.3.4-dist/js/bootstrap.min.js')
+    script(src='/assets/jquery-1.11.1.min.js')
+    script(src='/assets/swal-lib/sweet-alert.min.js')
+    script(src='/assets/jQuery.1.10.2/Content/Scripts/jquery-1.10.2.min.js')
+    script(src='/assets/jquery-ui-1.10.4.custom/js/jquery-1.10.2.js')
+    script(src='/assets/bootstrap-select/dist/js/bootstrap-select.min.js')
+    block cuoitrang
